@@ -34,8 +34,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            swr.cn-north-4.myhuaweicloud.com/default/bolg:${{ steps.date.outputs.today }}
-            swr.cn-north-4.myhuaweicloud.com/default/bolg:latest
+            swr.cn-north-4.myhuaweicloud.com/feyoung/bolg:${{ steps.date.outputs.today }}
+            swr.cn-north-4.myhuaweicloud.com/feyoung/bolg:latest
       - name: redeploy
         run: |
           curl -u ${{ secrets.WEBHOOK_USER_PASS }} https://webhook.lomtom.cn/hooks/redeploy-webhook
